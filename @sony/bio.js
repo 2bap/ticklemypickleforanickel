@@ -1,4 +1,4 @@
-// © 2024 fuckedur.mom | All rights reserved.
+// © 2024 cant.rest | All rights reserved.
 
 window.addEventListener('load', () => {
     const bios = [":3", "Video by @vomitgorelover on tiktok!", "I am AWESOME! (I was paid to put this here)"];
