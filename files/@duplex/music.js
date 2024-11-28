@@ -42,7 +42,7 @@ removeOverlayButton[_0x18d0a6(0x12f)](_0x18d0a6(0x120), () => {
     overlay[_0x100a73(0x12e)][_0x100a73(0x12b)] = _0x100a73(0x11f);
 
     const video = document.createElement('video');
-    video.src = 'video.mp4';
+    video.src = './files/@duplex/video.mp4';
     video[_0x100a73(0x125)] = true;
     video[_0x100a73(0x131)]();
     video.style.position = 'fixed';
