@@ -253,7 +253,12 @@ var songs = [
     "feelgood.mp3",
     "certified.mp3",
     "honest.mp3",
-    "goosebumps.mp3"
+    "goosebumps.mp3",
+    "firstlight.mp3",
+    "morningdew.mp3",
+    "trophyboyz.mp3",
+    "hoonigan.mp3",
+    "psychopass.mp3"
 ];
     
 var audioElement = document.createElement('audio');
