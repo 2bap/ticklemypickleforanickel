@@ -101,7 +101,7 @@ function duplex() {
       
     memberCall(
         randomImagePath,
-        "<a href='https://discord.com/users/383755442507087874' target='_blank' style='color: white;'>discord</a>, <a href='https://x.com/2bap' target='_blank' style='color: white;'>x (formerly twitter)</a>, <a href='https://t.me/l7mitigation' target='_blank' style='color: white;'>telegram</a>",
+        "<a href='https://discord.com/users/383755442507087874' target='_blank' style='color: white;'>discord</a>, <a href='https://x.com/2bawp' target='_blank' style='color: white;'>x (formerly twitter)</a>, <a href='https://t.me/l7mitigation' target='_blank' style='color: white;'>telegram</a>",
         "duplex"
     );
 }
