@@ -83,33 +83,42 @@ function memberCall(pfpSrc, textContent, user) {
 
 function $cars() {
     memberCall(
-        "assets/sony_icon.png",
+        "assets/bandwithdbandit.png",
         "<a href='https://discord.gg/socket' target='_blank' style='color: white;'>discord</a>",
         "bandwidthbandit"
     );
 }
 
 function duplex() {
-    memberCall(
+    const images = [
         "assets/duplex.png",
+        "assets/os_icon.png",
+        "assets/duplex_icon3.png"
+      ];
+
+      const randomIndex = Math.floor(Math.random() * images.length);
+      const randomImagePath = images[randomIndex];
+      
+    memberCall(
+        randomImagePath,
         "<a href='https://discord.com/users/383755442507087874' target='_blank' style='color: white;'>discord</a>, <a href='https://x.com/2bap' target='_blank' style='color: white;'>x (formerly twitter)</a>, <a href='https://t.me/l7mitigation' target='_blank' style='color: white;'>telegram</a>",
         "duplex"
     );
 }
 
-function valexnt() {
+function sony() {
     memberCall(
-        "assets/valexnt_icon.png",
+        "assets/sony_icon.png",
         "<a href='https://discord.com/users/1166703542468358234' target='_blank' style='color: white;'>discord</a>, <a href='https://t.me/valexntt' target='_blank' style='color: white;'>telegram</a>",
-        "valexnt"
+        "sony"
     );
 }
 
-function loundra() {
+function texthill() {
     memberCall(
-        "assets/l7_icon.png",
-        "<a href='https://solo.to/l7' target='_blank' style='color: white;'>solo.to</a>",
-        "l7"
+        "assets/texthill.png",
+        "<a href='https://discord.gg/socket' target='_blank' style='color: white;'>socket</a>",
+        "texthill"
     );
 }
 
@@ -239,10 +248,12 @@ var gifs = [
 
 var songs = [
     "illdowhatever.mp3",
-    "runningshoes.mp3",
     "2run.mp3",
     "moneytrees.mp3",
-    "feelgood.mp3"
+    "feelgood.mp3",
+    "certified.mp3",
+    "honest.mp3",
+    "goosebumps.mp3"
 ];
     
 var audioElement = document.createElement('audio');
@@ -256,14 +267,14 @@ function setRandomSong() {
 
     const song = document.getElementById("random-song"); 
     song.volume = 0;
-    song.playbackRate = 0.97; 
+    song.playbackRate = 0.90; 
 
     song.play();
 
     var fadeInInterval = setInterval(function () {
         song.volume += 0.1;
-        if (song.volume >= 0.7) {
-            song.volume = 0.7;
+        if (song.volume >= 0.4) {
+            song.volume = 0.45;
             clearInterval(fadeInInterval);
         }
     }, 350);
