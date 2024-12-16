@@ -222,7 +222,6 @@ var gifs = [
     "dialga.gif",
     "dragonite.gif",
     "entei.gif",
-    "fluttershy.gif",
     "garchomp.gif",
     "gardevoir.gif",
     "genesect.gif",
