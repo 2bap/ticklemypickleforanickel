@@ -106,13 +106,6 @@ function duplex() {
     );
 }
 
-function sony() {
-    memberCall(
-        "assets/sony_icon.png",
-        "<a href='https://discord.com/users/1166703542468358234' target='_blank' style='color: white;'>discord</a>, <a href='https://t.me/valexntt' target='_blank' style='color: white;'>telegram</a>",
-        "sony"
-    );
-}
 
 function texthill() {
     memberCall(
