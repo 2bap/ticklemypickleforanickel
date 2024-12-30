@@ -1,3 +1,4 @@
+// jizzed on by duplex
 document.addEventListener('DOMContentLoaded', function() {
     const createSnowflake = () => {
         const snowflake = document.createElement('div');
