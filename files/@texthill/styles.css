@@ -208,7 +208,6 @@ position: fixed;
 top: 340px;
 left: 1209px;
 transform: translate(-240%, -125%);
-width: 130px;
 height: 125px;
 filter: drop-shadow(0 0 3px #ffffff);
 border-radius: 90px;
@@ -233,7 +232,7 @@ border-radius: 90px;
    #triptych-name {
      position: fixed;
      top: 450px;
-     left: 1025px;
+     left: 1091px;
      transform: translate(-90%, -400%);
      color: #ffffff;
      filter: drop-shadow(0 0 10px #ffffff);
