@@ -2,399 +2,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="./files/@texthill/styles.css">
+<link rel="stylesheet" href="styles.css">
   <script src="./files/@texthill/effects.js"></script>
+  <script src="./files/@texthill/madwaffles.js"></script>
+<! –– ^ js script made by waffle ^ ––>
   <script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool'></script>  
-  <title>ceo-</title>
-  <meta property="og:type" content="website">
-    <meta property="og:site_name" content="cant.rest">
-    <meta property="og:url" content="https://cant.rest/">
-    <meta property="og:title" content="cant.rest">
-    <meta property="og:description" content="@texthill cant.rest">
-  <link rel="shortcut icon" href="./files/@texthill/ICON.png" type="image/x-icon">
+  <title>levy</title>
+  <link rel="shortcut icon" href="ICON.png" type="image/x-icon">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-@keyframes flash {
-    0% { color: white; }
-    50% { color: red; }
-    75% { color: blue}
-    100% { color: white; }
-
-  }
-  </style>
-
-    <script>
-      const titles = ["you cant leave me", "no death", "@texthill", ".gg/socket"];
-  
-      function changeTitle() {
-          let index = 0;
-          return function() {
-              document.title = titles[index];
-              index = (index + 1) % titles.length;
-          };
-      }
-  var colour="random"; // "random" can be replaced with any valid colour ie: "red"...
-var sparkles=100;// increase of decrease for number of sparkles falling
-
-var x=ox=400;
-var y=oy=300;
-var swide=800;
-var shigh=600;
-var sleft=sdown=0;
-var tiny=new Array();
-var star=new Array();
-var starv=new Array();
-var starx=new Array();
-var stary=new Array();
-var tinyx=new Array();
-var tinyy=new Array();
-var tinyv=new Array();
-
-colours=new Array('#ff0000','#00ff00','#ffffff','#ff00ff','#ffa500','#ffff00','#00ff00','#ffffff','ff00ff')
-
-n = 10;
-y = 0;
-x = 0;
-n6=(document.getElementById&&!document.all);
-ns=(document.layers);
-ie=(document.all);
-d=(ns||ie)?'document.':'document.getElementById("';
-a=(ns||n6)?'':'all.';
-n6r=(n6)?'")':'';
-s=(ns)?'':'.style';
-
-if (ns){
-	for (i = 0; i < n; i++)
-		document.write('<layer name="dots'+i+'" top=0 left=0 width='+i/2+' height='+i/2+' bgcolor=#ff0000></layer>');
-}
-
-if (ie)
-	document.write('<div id="con" style="position:absolute;top:0px;left:0px"><div style="position:relative">');
-
-if (ie||n6){
-	for (i = 0; i < n; i++)
-		document.write('<div id="dots'+i+'" style="position:absolute;top:0px;left:0px;width:'+i/2+'px;height:'+i/2+'px;background:#ff0000;font-size:'+i/2+'"></div>');
-}
-
-if (ie)
-	document.write('</div></div>');
-(ns||n6)?window.captureEvents(Event.MOUSEMOVE):0;
-
-function Mouse(evnt){
-
-	y = (ns||n6)?evnt.pageY+4 - window.pageYOffset:event.y+4;
-	x = (ns||n6)?evnt.pageX+1:event.x+1;
-}
-
-(ns)?window.onMouseMove=Mouse:document.onmousemove=Mouse;
-
-function animate(){
-
-	o=(ns||n6)?window.pageYOffset:0;
-
-	if (ie)con.style.top=document.body.scrollTop + 'px';
-
-	for (i = 0; i < n; i++){
-
-		var temp1 = eval(d+a+"dots"+i+n6r+s);
-
-		randcolours = colours[Math.floor(Math.random()*colours.length)];
-
-		(ns)?temp1.bgColor = randcolours:temp1.background = randcolours; 
-
-		if (i < n-1){
-
-			var temp2 = eval(d+a+"dots"+(i+1)+n6r+s);
-			temp1.top = parseInt(temp2.top) + 'px';
-			temp1.left = parseInt(temp2.left) + 'px';
-
-		} 
-		else{
-
-			temp1.top = y+o + 'px';
-			temp1.left = x + 'px';
-		}
-	}
-
-	setTimeout("animate()",10);
-}
-
-animate();
-
-window.onload=function() { if (document.getElementById) {
-	var i, rats, rlef, rdow;
-	for (var i=0; i<sparkles; i++) {
-		var rats=createDiv(3, 3);
-		rats.style.visibility="hidden";
-		rats.style.zIndex="999";
-		document.body.appendChild(tiny[i]=rats);
-		starv[i]=0;
-		tinyv[i]=0;
-		var rats=createDiv(5, 5);
-		rats.style.backgroundColor="transparent";
-		rats.style.visibility="hidden";
-		rats.style.zIndex="999";
-		var rlef=createDiv(1, 5);
-		var rdow=createDiv(5, 1);
-		rats.appendChild(rlef);
-		rats.appendChild(rdow);
-		rlef.style.top="2px";
-		rlef.style.left="0px";
-		rdow.style.top="0px";
-		rdow.style.left="2px";
-		document.body.appendChild(star[i]=rats);
-	}
-	set_width();
-	sparkle();
-}}
-
-function sparkle() {
-	var c;
-	if (Math.abs(x-ox)>1 || Math.abs(y-oy)>1) {
-		ox=x;
-		oy=y;
-		for (c=0; c<sparkles; c++) if (!starv[c]) {
-			star[c].style.left=(starx[c]=x)+"px";
-			star[c].style.top=(stary[c]=y+1)+"px";
-			star[c].style.clip="rect(0px, 5px, 5px, 0px)";
-			star[c].childNodes[0].style.backgroundColor=star[c].childNodes[1].style.backgroundColor=(colour=="random")?newColour():colour;
-			star[c].style.visibility="visible";
-			starv[c]=50;
-			break;
-		}
-	}
-	for (c=0; c<sparkles; c++) {
-		if (starv[c]) update_star(c);
-		if (tinyv[c]) update_tiny(c);
-	}
-	setTimeout("sparkle()", 40);
-}
-
-function update_star(i) {
-	if (--starv[i]==25) star[i].style.clip="rect(1px, 4px, 4px, 1px)";
-	if (starv[i]) {
-		stary[i]+=1+Math.random()*3;
-		starx[i]+=(i%5-2)/5;
-		if (stary[i]<shigh+sdown) {
-			star[i].style.top=stary[i]+"px";
-			star[i].style.left=starx[i]+"px";
-		}
-		else {
-			star[i].style.visibility="hidden";
-			starv[i]=0;
-			return;
-		}
-	}
-	else {
-		tinyv[i]=50;
-		tiny[i].style.top=(tinyy[i]=stary[i])+"px";
-		tiny[i].style.left=(tinyx[i]=starx[i])+"px";
-		tiny[i].style.width="2px";
-		tiny[i].style.height="2px";
-		tiny[i].style.backgroundColor=star[i].childNodes[0].style.backgroundColor;
-		star[i].style.visibility="hidden";
-		tiny[i].style.visibility="visible"
-	}
-}
-
-function update_tiny(i) {
-	if (--tinyv[i]==25) {
-		tiny[i].style.width="1px";
-		tiny[i].style.height="1px";
-	}
-	if (tinyv[i]) {
-		tinyy[i]+=1+Math.random()*3;
-		tinyx[i]+=(i%5-2)/5;
-		if (tinyy[i]<shigh+sdown) {
-			tiny[i].style.top=tinyy[i]+"px";
-			tiny[i].style.left=tinyx[i]+"px";
-		}
-		else {
-			tiny[i].style.visibility="hidden";
-			tinyv[i]=0;
-			return;
-		}
-	}
-	else tiny[i].style.visibility="hidden";
-}
-
-document.onmousemove=mouse;
-function mouse(e) {
-	if (e) {
-		y=e.pageY;
-		x=e.pageX;
-	}
-	else {
-		set_scroll();
-		y=event.y+sdown;
-		x=event.x+sleft;
-	}
-}
-
-window.onscroll=set_scroll;
-function set_scroll() {
-	if (typeof(self.pageYOffset)=='number') {
-		sdown=self.pageYOffset;
-		sleft=self.pageXOffset;
-	}
-	else if (document.body && (document.body.scrollTop || document.body.scrollLeft)) {
-		sdown=document.body.scrollTop;
-		sleft=document.body.scrollLeft;
-	}
-	else if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)) {
-		sleft=document.documentElement.scrollLeft;
-		sdown=document.documentElement.scrollTop;
-	}
-	else {
-		sdown=0;
-		sleft=0;
-	}
-}
-
-window.onresize=set_width;
-function set_width() {
-	var sw_min=999999;
-	var sh_min=999999;
-	if (document.documentElement && document.documentElement.clientWidth) {
-		if (document.documentElement.clientWidth>0) sw_min=document.documentElement.clientWidth;
-		if (document.documentElement.clientHeight>0) sh_min=document.documentElement.clientHeight;
-	}
-	if (typeof(self.innerWidth)=='number' && self.innerWidth) {
-		if (self.innerWidth>0 && self.innerWidth<sw_min) sw_min=self.innerWidth;
-		if (self.innerHeight>0 && self.innerHeight<sh_min) sh_min=self.innerHeight;
-	}
-	if (document.body.clientWidth) {
-		if (document.body.clientWidth>0 && document.body.clientWidth<sw_min) sw_min=document.body.clientWidth;
-		if (document.body.clientHeight>0 && document.body.clientHeight<sh_min) sh_min=document.body.clientHeight;
-	}
-	if (sw_min==999999 || sh_min==999999) {
-		sw_min=800;
-		sh_min=600;
-	}
-	swide=sw_min;
-	shigh=sh_min;
-}
-
-function createDiv(height, width) {
-	var div=document.createElement("div");
-	div.style.position="absolute";
-	div.style.height=height+"px";
-	div.style.width=width+"px";
-	div.style.overflow="hidden";
-	return (div);
-}
-
-function newColour() {
-	var c=new Array();
-	c[0]=255;
-	c[1]=Math.floor(Math.random()*256);
-	c[2]=Math.floor(Math.random()*(256-c[1]/2));
-	c.sort(function(){return (0.5 - Math.random());});
-	return ("rgb("+c[0]+", "+c[1]+", "+c[2]+")");
-}
-// ]]>
-
-      setInterval(changeTitle(), 150);
-  </script>
-      <script>
-      var TxtType = function (el, toRotate, period) {
-          this.toRotate = toRotate;
-          this.el = el;
-          this.loopNum = 0;
-          this.period = parseInt(period, 10) || 2000;
-          this.txt = "";
-          this.tick();
-          this.isDeleting = false;
-      };
-  
-      TxtType.prototype.tick = function () {
-          var i = this.loopNum % this.toRotate.length;
-          var fullTxt = this.toRotate[i];
-  
-          if (this.isDeleting) {
-              this.txt = fullTxt.substring(0, this.txt.length - 1);
-          } else {
-              this.txt = fullTxt.substring(0, this.txt.length + 1);
-          }
-  
-          this.el.innerHTML = '<span class="wrap">' + this.txt + "</span>";
-  
-          var that = this;
-          var delta = 200 - Math.random() * 100;
-  
-          if (this.isDeleting) {
-              delta /= 2;
-          }
-  
-          if (!this.isDeleting && this.txt === fullTxt) {
-              delta = this.period;
-              this.isDeleting = true;
-          } else if (this.isDeleting && this.txt === "") {
-              this.isDeleting = false;
-              this.loopNum++;
-              delta = 500;
-          }
-  
-          setTimeout(function () {
-              that.tick();
-          }, delta);
-      };
-  
-      window.onload = function () {
-          var elements = document.getElementsByClassName("typewrite");
-          for (var i = 0; i < elements.length; i++) {
-              var toRotate = elements[i].getAttribute("data-type");
-              var period = elements[i].getAttribute("data-period");
-              if (toRotate) {
-                  new TxtType(elements[i], JSON.parse(toRotate), period);
-              }
-          }
-          // INJECT CSS
-          var css = document.createElement("style");
-          css.type = "text/css";
-          css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #ffffff}";
-          document.body.appendChild(css);
-      };
-  
-  
-  </script>
+    <meta name="description" content="cant.rest">
+    <meta name="keywords" content="networkdriver, #tracer, raperest">
     <body>	
       
       <div class="overlay" id="overlay">
         <div class="proceed-button" onclick="removeOverlay()">*****</div>
     </div>
-    <video id="backgroundVideo" loop muted> <source src="./files/@texthill/nice.mov" type="video/mp4"></video>
-    <audio id="ceoAudio" src="./files/@texthill/nice.ogg" loop></audio>  
+    <video id="backgroundVideo" loop muted> <source src="nice.mp4" type="video/mp4"></video>
+    <audio id="levyAudio" src="./files/@texthill/nice.mp3" loop></audio>  
     <header>
-      <div style="position: absolute; top:68%; left: 50%; transform: translate(-50%, -50%);">
-        <img src="https://discord.c99.nl/widget/theme-5/1256394249402843137.png" alt="Discord Widget Image">
-    </div>
-    
     </header>
     <script>
     var audioElement = document.querySelector('audio'); // select the audio element
     audioElement.volume = 0.15; // set the volume to whatever u want 
     </script>
 <div class="line"></div>
-<img class="pfp" src="./files/@texthill/pfp.png">
-<h1 id="triptych-name">                   T E X T H I L L</h1>
+<img class="pfp" src="./files/@texthill/pfp.jpg">
+<h1 id="triptych-name">networkdriver</h1>
 <div class="dropdown-content">
-<a href="https://youtu.be/um0ETkJABmI"_blank" rel="noopener noreferrer"><img id="telegram-hover" src="star.png"></a>
-<a href="https://soundcloud.com/dave-blunts/the-cup?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" rel="noopener noreferrer"><img class="github" src="github-white.png"></a>
-<a href="https://discord.gg/YZGQCxuKCT" target="_blank" rel="noopener noreferrer"><img class="discord" src="discord-white.png">
-   
- 
-  <script type="text/javascript" src="js/jquery.1.11.1.js"></script>
-    
- 
+<a href="https://t.me/tracertg" target="_blank" rel="noopener noreferrer"><img id="telegram-hover" src="telegram-white.png"></a>
+<a href="https://soundcloud.com/lilyeat/sets/lyfestyle-7?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" rel="noopener noreferrer"><img class="github" src="github-white.png"></a>
+<a href="https://discord.gg/sped" target="_blank" rel="noopener noreferrer"><img class="discord" src="discord-white.png">
+
 <div class="owner">
 
-  <span class="owner-text">Ceo-</span>
-</div>
 
-<h4 class="aka"></h4>
+</div>
+<h4 class="aka">@texthill</h4>
 <div id="snow"></div>
 <script>
   function playBackgroundVideo() {
@@ -402,16 +47,10 @@ function newColour() {
             video.play();
             
         }
-        
-  function playBackgroundVideo() {
-                  var video = document.getElementById('backgroundVideo');
-                  video.play();
-                  
-              }
-      
-  function playAudio() {
-            var audio = document.getElementById('ceoAudio');
-            audio.volume = 0.9;
+
+        function playAudio() {
+            var audio = document.getElementById('levyAudio');
+            audio.volume = 0.99;
             audio.play();
         }
 
@@ -425,15 +64,20 @@ function newColour() {
 
 </script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Snowstorm/20131208/snowstorm-min.js"></script>
-  <script data-react-helmet="true">
-      snowStorm.snowColor = '#ffffff';
-      snowStorm.flakesMaxActive = 165;
-      snowStorm.useTwinkleEffect = true;
-      snowStorm.autoStart = false;
-      snowStorm.freezeOnBlur = false;
-      snowStorm.excludeMobile = false;
+
+  <!-- Embed JSON code -->
+  <script type="application/json" id="embedData">
+    {
+       "embed": {
+        "title": "texthill",
+        "description": "cant.rest",
+        "url": "https://cant.rest/@texthill",
+        "color": #eed1d6
+        "image": ""
+      }
+    }
   </script>
+
 </body>
   
 </body>
