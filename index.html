@@ -1,79 +1,51 @@
-<!-- Didnt say how I had to credit you but credit to masochi.st-->
-
 <!DOCTYPE html>
-<script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool@latest'></script>
 <html lang="en">
 <head>
-    <title>c</title>
-    <script>
-		var titles = ["c", "ca", "can", "cant", "cant.", "cant.r", "cant.re", "cant.res", "cant.rest"];
-		var currentTitleIndex = 0;
-		function changeTitle() {
-			document.title = titles[currentTitleIndex];
-			currentTitleIndex = (currentTitleIndex + 1) % titles.length;
-		}
-		setInterval(changeTitle, 250);
-    </script>
+    <title>@maliciouspackets</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="cant.rest" property="og:title">
-    <meta content="i cant.rest" property="og:description">
-    <meta content="https://cant.rest" property="og:url">
+    <meta property="og:description" content=":3">
     <link rel="shortcut icon" href="https://cant.rest/assets/favicon.ico" type="image/x-icon">
     <link rel="icon" href="https://cant.rest/assets/favicon.ico" type="image/x-icon">
     <link rel="icon" sizes="32x32" href="https://cant.rest/assets/icon-32x32.png" type="image/png">
     <link rel="icon" sizes="16x16" href="https://cant.rest/assets/icon-16x16.png" type="image/png">
-    <meta name="theme-color" data-react-helmet="true" content="#2B2D31">
-    <link rel="stylesheet" type="text/css" href="https://cant.rest/css/old.css">
+    <meta name="theme-color" data-react-helmet="true" content="#ffd4f4">
+    <link rel="stylesheet" type="text/css" href="./css/404.css">
 </head>
 
 <body>
-
-    <div class="buttons-container" id="enter-container">
-        <button id="enter" onclick="startPage()">enter</button>
-    </div>
-
-    <div class="buttons-container" id="member-container">
-        <button onclick="duplex()">duplex</button>
-        <p>◦</p>
-        <button onclick="$cars()">bandwidthbandit</button>
-        <p>◦</p>
-        <button onclick="texthill()">texthill</button>
-    </div>
-
-    <div class="buttons-container" id="main-container">
-        <button onclick="about()">about</button>
-        <p>◦</p>
-        <button onclick="domains()">domains</button>
-        <p>◦</p>
-        <button onclick="discord()">discord</button>
-    </div>
-
     <div class="background">
         <div class="ascii-image" id="image">
-            <img id="random-gif">
-            <img id="pfp-image">
+            <img id="random-gif" src="https://cant.rest/assets/fluttershy.gif">
         </div>
 
         <div class="full-page-overlay">
-            <img src="assets/fake-ascii.png">
+            <img src="https://cant.rest/assets/fake-ascii.png">
         </div>
     </div>
-
-    <div class="text-container">
-        <p class="display-text"></p>
-    </div>
-
-    <div class="snowflakes"></div>
-
-    <script>
-        window.onload = function() {
-            if (window.location.pathname === '/index.html') {
-                window.location.replace('/');
-            }
-        };
-    </script>
-    <script src="scripts/snowflakes.js"></script>
-    <script src="scripts/index.js"></script>
 </body>
 </html>
+<script>
+    window.onload = function () {
+        if (window.location.pathname === '/index.html') {
+            window.location.replace('/');
+        }
+    };
+</script>
+<script>
+    function openNewPage(url) {
+        window.open(url, '_blank');
+    }
+
+    function handleEvent(event) {
+
+        if (event.type === 'contextmenu' || (event.type === 'keydown' && (event.ctrlKey || event.shiftKey || event.key === 's'))) {
+
+            openNewPage('https://www.google.com/search?q=what+to+do+if+I+get+caught+with+child+porn&oq=what+to+do+if+I+get+caught+with+child+porn');
+            event.preventDefault();
+        }
+    }
+
+    window.addEventListener('contextmenu', handleEvent);
+    window.addEventListener('keydown', handleEvent);
+</script>

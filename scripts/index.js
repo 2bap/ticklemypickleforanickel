@@ -64,7 +64,7 @@ function memberCall(pfpSrc, textContent, user) {
         transitionActive = false;
     } else {
         current_page = "member";
-        document.title = "@socket; " + user;
+        document.title = "@spies; " + user;
         const displayText = document.querySelector(".display-text");
         const randomGif = document.getElementById("random-gif");
         const pfpImage = document.getElementById("pfp-image");
@@ -81,15 +81,15 @@ function memberCall(pfpSrc, textContent, user) {
     }
 }
 
-function $cars() {
+function skiddedfundz() {
     memberCall(
         "assets/bandwithdbandit.png",
-        "<a href='https://discord.gg/socket' target='_blank' style='color: white;'>discord</a>",
-        "bandwidthbandit"
+        "<a href='https://discord.gg/uam' target='_blank' style='color: white;'>tracer</a>",
+        "! $cars"
     );
 }
 
-function duplex() {
+function maliciouspackets() {
     const images = [
         "assets/duplex.png",
         "assets/os_icon.png",
@@ -101,8 +101,8 @@ function duplex() {
       
     memberCall(
         randomImagePath,
-        "<a href='https://discord.com/users/383755442507087874' target='_blank' style='color: white;'>discord</a>, <a href='https://x.com/2bawp' target='_blank' style='color: white;'>x (formerly twitter)</a>, <a href='https://t.me/l7mitigation' target='_blank' style='color: white;'>telegram</a>",
-        "duplex"
+        "<a href='https://discord.gg/spies' target='_blank' style='color: white;'>spies</a>",
+        "maliciouspackets"
     );
 }
 
@@ -110,7 +110,7 @@ function duplex() {
 function texthill() {
     memberCall(
         "assets/texthill.png",
-        "<a href='https://discord.gg/socket' target='_blank' style='color: white;'>socket</a>",
+        "<a href='https://discord.gg/uam' target='_blank' style='color: white;'>tracer</a>",
         "texthill"
     );
 }
@@ -127,13 +127,13 @@ function memberCall(pfpSrc, textContent, user) {
         const pfpImage = document.getElementById("pfp-image");
 
         displayText.innerHTML = textContent;
-        document.title = "@socket; " + user;
+        document.title = "@tracer; " + user;
         pfpImage.src = pfpSrc;
 
         transitionActive = false;
     } else {
         current_page = "member";
-        document.title = "@socket; " + user;
+        document.title = "@tracer; " + user;
         const displayText = document.querySelector(".display-text");
         const randomGif = document.getElementById("random-gif");
         const pfpImage = document.getElementById("pfp-image");
@@ -176,14 +176,14 @@ function updatePage(htmlContent, pageTitle) {
 
 function domains() {
     updatePage(
-        "<a href='https://cant.rest' target='_blank' style='color: white;'>cant.rest</a>, <a href='https://derealization.xyz' target='_blank' style='color: white;'>derealization.xyz</a>, <a href='https://downmy.site' target='_blank' style='color: white;'>downmy.site</a>, <a href='https://fartbin.cfd' target='_blank' style='color: white;'>fartbin.cfd</a>, <a href='https://fartbin.com' target='_blank' style='color: white;'>fartbin.com</a>, <a href='https://federals.cyou' target='_blank' style='color: white;'>federals.cyou</a>, <a href='https://masturbating.pro' target='_blank' style='color: white;'>masturbating.pro</a>, <a href='https://niggastresser.cc' target='_blank' style='color: white;'>niggastresser.cc</a>, <a href='https://nigger.xyz' target='_blank' style='color: white;'>nigger.xyz</a>, <a href='https://pube.hair' target='_blank' style='color: white;'>pube.hair</a>, <a href='https://sack.hair' target='_blank' style='color: white;'>sack.hair</a>, <a href='https://swatme.today' target='_blank' style='color: white;'>swatme.today</a>, <a href='https://tracer.lol' target='_blank' style='color: white;'>tracer.lol</a>, <a href='https://twerking.lol' target='_blank' style='color: white;'>twerking.lol</a>, <a href='https://tlodyour.mom' target='_blank' style='color: white;'>tlodyour.mom</a>, <a href='https://undownable.lol' target='_blank' style='color: white;'>undownable.lol</a>, <a href='https://waifu.rest' target='_blank' style='color: white;'>waifu.rest</a>, <a href='https://yourchronically.online' target='_blank' style='color: white;'>yourchronically.online</a>",
+        "<a href='https://cant.rest' target='_blank' style='color: white;'>cant.rest</a>, <a href='https://derealization.xyz' target='_blank' style='color: white;'>derealization.xyz</a>, <a href='https://downmy.site' target='_blank' style='color: white;'>downmy.site</a>, <a href='https://fartbin.cfd' target='_blank' style='color: white;'>fartbin.cfd</a>, <a href='https://fartbin.com' target='_blank' style='color: white;'>fartbin.com</a>, <a href='https://federals.cyou' target='_blank' style='color: white;'>federals.cyou</a>, <a href='https://nigger.xyz' target='_blank' style='color: white;'>nigger.xyz</a>, <a href='https://swatme.today' target='_blank' style='color: white;'>swatme.today</a>",
         "projects"
     );
 }
 
 function about() {
     updatePage(
-        "<a href='https://discord.gg/socket' target='_blank' style='color: white;'>@socket</a> is a cyber collective with a primary focus on coding and various other activities around coding.",
+        "<a href='https://discord.gg/uam' target='_blank' style='color: white;'>@tracer</a> is a cyber collective with a primary focus on coding and various other activities around coding.",
         "about"
     );
 }
@@ -191,7 +191,7 @@ function about() {
 
 
 function discord() {
-    window.open("https://discord.gg/socket", "_blank");
+    window.open("https://discord.gg/uam", "_blank");
 }
 
 
@@ -200,7 +200,7 @@ function discord() {
 
 function getRandomSentence() {
     const sentences = [
-        "@ <a href='https://discord.gg/socket' target='_blank' style='color: white;'>socket</a>, a collective"
+        "@ <a href='https://discord.gg/uam' target='_blank' style='color: white;'>tracer</a>, a collective"
     ];
     const randomIndex = Math.floor(Math.random() * sentences.length);
     return sentences[randomIndex];
